@@ -47,4 +47,4 @@ styles.css: All the aesthetic themes (Neon, Scrapbook, Terminal).
 
 script.js: The "brain" that powers the widgets and mood transitions.
 
-Made with ♡ by Shakshitha
+
