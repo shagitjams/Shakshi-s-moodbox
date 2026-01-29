@@ -1,160 +1,50 @@
-## Electron App Template 
+ Shakshitha's Moodbox 
+A cute, floating desktop widget designed to match your vibe and boost your productivity. Built with Electron.js and featuring custom hand-drawn assets.
 
-**IMPORTANT:** Click & open README.md for full instruction. The preview gets cut off. 
+🎨 The 5 Aesthetic Modes
+Each mode transforms the widget’s UI and provides a specific tool tailored to your current emotion:
 
-A simple ElectronJS starter template for building desktop applications using HTML, CSS, and JavaScript.
+⚡ Energized (Retro-Futurism): Features a neon glow and a "Daily Win" tracker to lock in your main goal.
 
-This repo is part of my YouTube tutorial on setting up your very first Electron desktop app. It’s designed to be simple, beginner-friendly, and easy to customize for any project.
+☁️ Overwhelmed (Mixed Media): A calming scrapbook style with a guided breathing circle to help you ground yourself.
 
----
+🎨 Creative (Y2K Iridescent): A bright, colorful interface with a random palette generator for design inspiration.
 
-## Tutorial Video
+💻 Focused (Tech Terminal): A high-contrast "Matrix" style focus timer for deep work sessions.
 
-This repo is a part of my Youtube video tutorial on how to set up your very first desktop application. See the video here: https://www.youtube.com/watch?v=btxGSJ3Dh8E&t=373s
+✨ Dreamy (Vintage): A soft, paper-textured digital sticky note for jotting down midnight thoughts or future ideas.
 
-This repo is only for the basic Electron template that you can clone to build whatever you want. But if you're interested in a beginner demonstration tutorial too, see this repositary for a simple Calendar Widget: https://github.com/nasha-wanich/little-calendar 
+🚀 Technical Highlights
+Frameless UI: Designed to sit on your desktop as a floating widget without standard window borders.
 
----
+Draggable Interface: Move the widget anywhere on your screen by clicking and dragging the background.
 
-## What’s Included
+Custom Assets: All sticker icons were hand-drawn and exported as transparent PNGs to maintain a unique "scrapbook" feel.
 
-- Basic Electron setup
-- Single window configuration
-- Frameless, non-resizable window
-- Draggable app window using CSS
-- Plain HTML / CSS / JavaScript (no frameworks)
+Dynamic Theming: Uses CSS variables and JavaScript to swap fonts, colors, and layouts instantly.
 
-You can now customize the UI, add features, or turn this into any desktop app you want.
+🛠️ How to Run
+Clone the repo:
 
----
+Bash
+git clone https://github.com/shagitjams/Shakshi-s-moodbox.git
+Install dependencies:
 
-## What this template is for 
-
-This template is great if you are:
-
-- New to ElectronJS
-- A designer or frontend developer exploring desktop apps
-- Building quick prototypes or side projects
-- Looking for a clean starting point without extra complexity
-
-If you’re looking for a guided beginner project after setting up this template, check out this calendar demo repo: https://github.com/nasha-wanich/little-calendar
-
----
-
-## Project Structure
-
-```
-electron-app-template
-├── node_modules
-├── main.js
-├──index.html
-├── styles.css
-├── script.js
-├── package.json
-└── package-lock.json
-```
-
-### Core Files Explained
-
-- **`main.js`**
-    
-    Electron’s main process. Creates the app window and loads the HTML file.
-    
-- **`index.html`**
-    
-    The main UI layout of your desktop app.
-    
-- **`styles.css`**
-    
-    Styles for your app UI, including draggable window behavior.
-    
-- **`script.js`**
-    
-    Frontend JavaScript logic for interactivity.
-    
-- **`package.json`**
-    
-    App configuration, dependencies, and run scripts.
-
-
----
-
-## Prerequisites
-
-Before using this template, make sure you have:
-
-- **Node.js**
-- **Homebrew** (macOS)
-- A code editor (VS Code recommended)
-
----
-
-## Step by step set up
-
-### 1. Install Package Managers (if you don’t have one on your computer)
-
-MacOS: Homebrew ([https://brew.sh](https://brew.sh/))
-
-Window: Chocolatey (https://chocolatey.org/install)
-
-### 2. Install Node.js
-
-You can install Node.js in two ways:
-
-### Option A: Use a package manager (mine is Homebrew which I used in the tutorial)
-
-```bash
-brew install node
-```
-
-Verify installation:
-
-```bash
-node -v
-npm -v
-```
-
-If both commands return version numbers, you’re good to go 
-
-### Option B: Download Installer
-
-Download Node.js directly from: https://nodejs.org
-
-and follow their installation instructions.
-
-
-### 3. Clone This Repo
-
-```bash
-gitclone https://github.com/nasha-wanich/electron-app-template.git
-cd electron-app-template
-```
-
-### 4. Install Dependencies
-
-```bash
+Bash
 npm install
-```
+Launch the widget:
 
-### 5. Run the App
+Bash
+npm start
+📂 Project Structure
+assets/: Contains the hand-drawn sticker PNGs.
 
-```bash
-npm run start
-```
+main.js: Electron configuration for the frameless, transparent window.
 
-This will launch a simple Electron desktop window.
+index.html: The scrapbook "skeleton."
 
----
+styles.css: All the aesthetic themes (Neon, Scrapbook, Terminal).
 
-## Next Steps
+script.js: The "brain" that powers the widgets and mood transitions.
 
-- Modify `index.html` to build your app layout
-- Style your app UI in `styles.css`
-- Add your app logic in `script.js`
-- Adjust window behavior in `main.js`  (ex. size, transparency etc.)
-
----
-
-## Want a Beginner Walkthrough Project?
-
-If you want a step-by-step desktop app beginner tutorial, check out this repo where we build a calendar widget together: https://github.com/nasha-wanich/little-calendar
+Made with ♡ by Shakshitha
