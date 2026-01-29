@@ -1,18 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <title>app name</title>
-    <link rel="stylesheet" href="styles.css" />
-  </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shakshitha's Moodbox</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body id="app-body" class="default-mode">
 
-  <body>
-    <div class="app">
-      <p>Test app</p>
-      <button id="testBtn">Button</button>
+    <div class="scrapbook-container">
+        <button onclick="goHome()" class="back-btn">← Back</button>
+
+        <header>
+            <button onclick="window.close()" class="exit-btn">✕</button>
+            <h1 id="mood-title">Choose Your Vibe</h1>
+        </header>
+
+        <main id="widget-container">
+            <div class="placeholder-content">
+                <p>Click a sticker below to load your tools.</p>
+            </div>
+        </main>
+
+        <nav class="sticker-palette">
+
+            <button class="sticker" onclick="changeMood('energized')">
+                <img src="assets/energized.png" alt="Energized">
+                <span>Energized</span>
+            </button>
+
+            <button class="sticker" onclick="changeMood('overwhelmed')">
+                <img src="assets/overwhelmed.png" alt="Overwhelmed">
+                <span>Overwhelmed</span>
+            </button>
+
+            <button class="sticker" onclick="changeMood('creative')">
+                <img src="assets/creative.png" alt="Creative">
+                <span>Creative</span>
+            </button>
+
+            <button class="sticker" onclick="changeMood('focused')">
+                <img src="assets/focused.png" alt="Focused">
+                <span>Focused</span>
+            </button>
+
+            <button class="sticker" onclick="changeMood('dreamy')">
+                <img src="assets/dreamy.png" alt="Dreamy">
+                <span>Dreamy</span>
+            </button>
+        </nav>
+
     </div>
 
     <script src="script.js"></script>
-  </body>
+</body>
 </html>
-

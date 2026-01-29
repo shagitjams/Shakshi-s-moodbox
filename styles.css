@@ -1,26 +1,186 @@
-* {
-  box-sizing: border-box;
-}
 
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 
 body {
-  margin: 0;
-  width: 100vw;
-  height: 100vh;
-
-  background: white;
-  user-select: none;
-  -webkit-app-region: drag;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Courier New', Courier, monospace; 
+    transition: all 0.5s ease-in-out;
+    overflow: hidden;
 }
 
-.app {
-  padding: 16px;
+
+.scrapbook-container {
+    -webkit-app-region: drag;
+    width: 90%;
+    max-width: 500px;
+    min-height: 450px;
+    padding: 30px;
+    border-radius: 15px;
+    background: rgba(228, 156, 192, 0.85);
+    box-shadow: 10px 10px 0px rgb(229, 1, 126);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    position: relative;
+}
+.sticker, 
+.task-btn, 
+.back-btn,
+input, 
+textarea {
+    -webkit-app-region: no-drag; 
 }
 
-button,
-input,
-textarea,
-select {
-  -webkit-app-region: no-drag;
-  cursor: pointer;
+#widget-container {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+}
+
+
+.sticker-palette {
+    display: flex;
+    justify-content: space-around;
+    padding-top: 20px;
+    border-top: 2px dashed #ff0998;
+}
+
+.sticker {
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.sticker img {
+    width: 70px; 
+    height: auto;
+    filter: drop-shadow(3px 3px 2px rgba(0,0,0,0.2));
+}
+
+.sticker:hover {
+    transform: scale(1.2) rotate(10deg); 
+}
+
+.energized-mode {
+    background-color: #0b0014;
+    color: #00f3ff;
+}
+.energized-mode .scrapbook-container {
+    background: rgba(20, 0, 40, 0.9);
+    border: 2px solid #ff00ff;
+    box-shadow: 0 0 20px #ff00ff;
+}
+
+.overwhelmed-mode {
+    background-color: #f4ece1;
+}
+.overwhelmed-mode .scrapbook-container {
+    background-image: radial-gradient(#d7ccc8 1px, transparent 1px);
+    background-size: 20px 20px; /* Looks like graph paper */
+    color: #5d4037;
+    border: 2px solid #d7ccc8;
+}
+
+.creative-mode {
+    background: linear-gradient(45deg, #ff9a9e, #fad0c4, #a1c4fd);
+    color: #4a4a4a;
+}
+
+.focused-mode {
+    background-color: #1a1a1a;
+    color: #39ff14; 
+}
+.focused-mode .scrapbook-container {
+    background: #000;
+    border: 1px solid #39ff14;
+    font-family: 'Consolas', 'Monaco', monospace;
+}
+
+
+.dreamy-mode {
+    background-color: #9873d4;
+    color: #fefae0;
+}
+.dreamy-mode .scrapbook-container {
+    background-color: #faedcd;
+    color: #5d5289;
+}
+
+.timer-display {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.breathing-circle {
+    width: 80px;
+    height: 80px;
+    background: rgba(0, 58, 247, 0.5);
+    border-radius: 50%;
+    animation: breathe 4s infinite ease-in-out;
+}
+
+@keyframes breathe {
+    0%, 100% { transform: scale(1); opacity: 0.5; }
+    50% { transform: scale(1.6); opacity: 1; }
+}
+
+.task-btn {
+    padding: 10px 20px;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 10px;
+}
+.exit-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    background: none;
+    border: none;
+    color: inherit;
+    cursor: pointer;
+    -webkit-app-region: no-drag; 
+}
+.sticker-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+.sticker-container span {
+    font-size: 10px;
+    text-transform: uppercase;
+    opacity: 0.8;
+}
+.back-btn {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: inherit;
+    padding: 5px 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 0.8rem;
+    z-index: 10;
+    -webkit-app-region: no-drag; /* Crucial: ensures you can click it! */
+}
+
+.back-btn:hover {
+    background: rgba(255, 255, 255, 0.4);
 }
